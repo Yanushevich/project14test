@@ -6,15 +6,17 @@
 <meta charset="UTF-8">
 <title>Результат</title>
 </head>
-<body>
+<body bgcolor: "ADD8E6">
+<center>
 <h1>Результат</h1>
 <h2>Ваши введенные данные:</h2>
-<p><strong>Сторона:</strong> ${first_result}</p>
+<br>
+<p><strong>Сторона:</strong> ${storona_result}</p>
 <p><strong>Результат:</strong> ${result}</p>
 
 <form action="${pageContext.request.contextPath}/Form.jsp">
     <input type="submit" name="sign" value="Назад">
     </form>
-
+</center>
 </body>
 </html>
