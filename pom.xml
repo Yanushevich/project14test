@@ -1,7 +1,7 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
-  <modelVersion>4.0.0</modelVersion>
-  <groupId>Calculate</groupId>
-  <artifactId>Calculate4</artifactId>
+  <modelVersion>0.0.4</modelVersion>
+  <groupId>Laba4</groupId>
+  <artifactId>Laba4</artifactId>
   <version>1</version>
   <packaging>war</packaging>
   <name>Laba4</name>
@@ -9,7 +9,7 @@
   <url>http://maven.apache.org</url>
   
   <build>
-  <finalName>Calculate</finalName>
+  <finalName>Project14</finalName>
   <defaultGoal>package</defaultGoal>
     
 <pluginManagement>
