@@ -8,7 +8,7 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-@WebServlet(name="Calc", urlPatterns="/JavaCalc") //связывание сервлета с URL
+@WebServlet(name="Calc", urlPatterns="/JavaCalc") //пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅ URL
 public class Calc extends HttpServlet {
 
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
@@ -20,36 +20,30 @@ public class Calc extends HttpServlet {
 	}
 	
 	private static class RequestCalc {
-		private final String first_calc;
-		private final String second_calc;
+		private final String storona_calc;
 		private int result;
 						
-		private RequestCalc (String first, String second) {
-			this.first_calc = first;
-			this.second_calc = second;
+		private RequestCalc (String storona) {
+			this.storona_calc = storona;
 			}
 		
 		public static RequestCalc fromRequestParameters(HttpServletRequest request) {
 			return new RequestCalc(
-			request.getParameter("first"),
-			request.getParameter("second"));
+			request.getParameter("storona"));
 			}
 				
 		public void setAsRequestAttributesAndCalculate(HttpServletRequest request) {
-			request.setAttribute("first_result", first_calc);
-			request.setAttribute("second_result", second_calc);
-			int first_try;
-			int second_try;
+			request.setAttribute("storona_result", storona_calc);
+			int storona_try;
 			try { 
-			first_try=Integer.parseInt(first_calc);
-			second_try=Integer.parseInt(second_calc);
+			storona_try=Integer.parseInt(storona_calc);
 			}
 			catch (NumberFormatException e) {
-				first_try=0;
-				second_try=0;	
+				storona_try=0;
+
 			}
 			
-			result=first_try+second_try;
+			result=storona_try*4;
 			request.setAttribute("result", result);
 		}
 		
