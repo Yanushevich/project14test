@@ -21,7 +21,7 @@ public class Calc extends HttpServlet {
 	
 	private static class RequestCalc {
 		private final String storona_calc;
-		private int result;
+		private double result;
 						
 		private RequestCalc (String storona) {
 			this.storona_calc = storona;
@@ -34,9 +34,9 @@ public class Calc extends HttpServlet {
 				
 		public void setAsRequestAttributesAndCalculate(HttpServletRequest request) {
 			request.setAttribute("storona_result", storona_calc);
-			int storona_try;
+			double storona_try;
 			try { 
-			storona_try=Integer.parseInt(storona_calc);
+			storona_try=Double.parseDouble(storona_calc);
 			}
 			catch (NumberFormatException e) {
 				storona_try=0;
