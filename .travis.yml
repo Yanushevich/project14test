@@ -1,6 +1,16 @@
 language: java
+before_script:
+- echo "Starting build"
+script:
+- mvn clean package
+after_script:
+- echo "Script finished"
+after_success:
+- echo "Build ready"
+- ls -l $TRAVIS_BUILD_DIR/target
+after_failure:
+- echo "Build failure"
 deploy:
   provider: heroku
-  api_key:
-    secure: "503315e9-d27a-4199-b1f2-3026118b4b53"
+  api_key: 503315e9-d27a-4199-b1f2-3026118b4b53
   edge: true
