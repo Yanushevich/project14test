@@ -17,6 +17,7 @@
         <input type="submit" name="sign" value="Calculate">
         <br>
         Если число не целое, то отделять дробную часть нужно точкой (например, 5.4)
+        test
     </form>
     </body>
 </html>
