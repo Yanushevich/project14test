@@ -9,7 +9,7 @@
   <url>http://maven.apache.org</url>
   
   <build>
-  <finalName>Calculate</finalName>
+  <finalName>project14test</finalName>
   <defaultGoal>package</defaultGoal>
     
 <pluginManagement>
