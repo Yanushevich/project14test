@@ -14,7 +14,7 @@
 <p><strong>Сторона:</strong> ${storona_result} см.</p>
 <p><strong>Результат:</strong> ${result} см.</p>
 
-<form action="${pageContext.request.contextPath}/Form.jsp">
+<form action="<%= request.getContextPath() %>/Form.jsp">
     <input type="submit" name="sign" value="Назад">
     </form>
 
